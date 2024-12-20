@@ -188,6 +188,23 @@ After setting up GitConnect locally, you can enjoy the following features:
 
 ---
 
+## File Structure 📂
+
+The project has the following file structure:
+
+GitConnect/
+├── index.html                # Main entry point for the application
+├── assets/
+│   ├── css/
+│   │   └── style.css         # Styling for the GitConnect app
+│   └── js/
+│       ├── api.js           # Fetches data and simulates API calls
+│       ├── app.js           # Main JavaScript file for the application logic
+│       ├── module.js        # Utility functions for DOM manipulation
+│       └── theme.js         # Handles theme switching (light/dark mode)
+└── fav/
+    └── favicon.svg          # Favicon for the application
+
 ## Contributing 🤝
 
 Contributions are always welcome! If you want to contribute to GitConnect, follow these steps:
