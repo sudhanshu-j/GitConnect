@@ -1,0 +1,1317 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Custom Properties */
+
+/* CSS Variables */
+
+/* Root Variables for Global Theme */
+:root {
+  /* Color Variables for Dark and Light Themes */
+
+  /* Basic Colors */
+  --white: #ffffff; /* White color */
+  --black: #000000; /* Black color */
+
+  /* Dark Theme Color Variables */
+  --background-dark: #141d2e; /* Dark background color */
+  --on-background-dark: #ffffff; /* Text color on dark background */
+  --primary-dark: #0077ff; /* Primary button or link color */
+  --primary-hover-dark: #006be6; /* Hover color for primary elements */
+  --primary-outline-dark: #006deb; /* Outline color for primary elements */
+  --primary-outline-hover-dark: #1a85ff; /* Hover outline color for primary elements */
+  --surface-dark: #1a243d; /* Dark surface background */
+  --on-surface-dark: #8592b2; /* Text color on dark surfaces */
+  --on-surface-2-dark: #acb3c3; /* Secondary text color for dark surfaces */
+  --surface-variant-dark: #1f2a47; /* Dark surface variant color */
+  --surface-variant-hover-dark: #253356; /* Dark surface variant hover color */
+  --on-surface-variant-dark: #7a8399; /* Text color on dark surface variants */
+  --surface-variant-outline-dark: #233153; /* Dark outline for surface variants */
+  --surface-variant-outline-hover-dark: #3d588f; /* Dark hover outline for surface variants */
+  --error-dark: #ff6b6b; /* Error color for dark theme */
+  --error-alpha-10-dark: #ff6b6b1a; /* Light error color with transparency */
+  --outline-dark: #1f2a47; /* Outline color for dark theme */
+  --surface-1-dark: #1a263d; /* Dark first surface color */
+  --surface-1-hover-dark: #202f4b; /* Dark surface 1 hover color */
+  --surface-1-outline-dark: #1f2d47; /* Outline color for dark surface 1 */
+  --surface-1-outline-hover-dark: #3d588f; /* Hover outline color for dark surface 1 */
+  --alpha-80-dark: #ffffffcc; /* Dark theme background with 80% opacity */
+  --alpha-70-dark: #ffffffb3; /* Dark theme background with 70% opacity */
+  --alpha-60-dark: #ffffff99; /* Dark theme background with 60% opacity */
+  --alpha-50-dark: #ffffff80; /* Dark theme background with 50% opacity */
+  --alpha-10-dark: #ffffff1a; /* Dark theme background with 10% opacity */
+  --alpha-5-dark: #ffffff0d; /* Dark theme background with 5% opacity */
+  --overlay-bg-dark: #0b0f1980; /* Dark theme overlay background with transparency */
+
+  /* Light Theme Color Variables */
+  --background-light: hsl(0, 0%, 100%); /* Light background color */
+  --on-background-light: #141d2e; /* Text color on light background */
+  --primary-light: #0077ff; /* Primary button or link color for light theme */
+  --primary-hover-light: #006be6; /* Hover color for primary elements in light theme */
+  --primary-outline-light: #006deb; /* Outline color for primary elements in light theme */
+  --primary-outline-hover-light: #005fcc; /* Hover outline color for primary elements in light theme */
+  --surface-light: #ebf0ff; /* Light surface background */
+  --on-surface-light: #5b6271; /* Text color on light surfaces */
+  --on-surface-2-light: #525866; /* Secondary text color for light surfaces */
+  --surface-variant-light: #dce0ea; /* Light surface variant color */
+  --surface-variant-hover-light: #bcc4d7; /* Light surface variant hover color */
+  --on-surface-variant-light: #4d5466; /* Text color on light surface variants */
+  --surface-variant-outline-light: #d2d6e0; /* Light outline for surface variants */
+  --surface-variant-outline-hover-light: #b4bacb; /* Light hover outline for surface variants */
+  --error-light: #c03939; /* Error color for light theme */
+  --error-alpha-10-light: #c039391a; /* Light error color with transparency */
+  --outline-light: #cfd2d8; /* Outline color for light theme */
+  --surface-1-light: #ebf0ff; /* Light first surface color */
+  --surface-1-hover-light: #ccdaff; /* Light surface 1 hover color */
+  --surface-1-outline-light: #e1e6f5; /* Outline color for light surface 1 */
+  --surface-1-outline-hover-light: #bbc7e8; /* Hover outline color for light surface 1 */
+  --alpha-80-light: #000000cc; /* Light theme background with 80% opacity */
+  --alpha-70-light: #000000b3; /* Light theme background with 70% opacity */
+  --alpha-60-light: #00000099; /* Light theme background with 60% opacity */
+  --alpha-50-light: #00000080; /* Light theme background with 50% opacity */
+  --alpha-10-light: #0000001a; /* Light theme background with 10% opacity */
+  --alpha-5-light: #0000000d; /* Light theme background with 5% opacity */
+  --overlay-bg-light: #868c9880; /* Light theme overlay background with transparency */
+
+  /* Typography Variables */
+
+  /* Font Family */
+  --font-primary: "Poppins", sans-serif; /* Primary font for the website */
+
+  /* Font Size */
+  --base-font-size: 62.5%; /* Base font size for scaling */
+  --title-1: 4.8rem; /* Font size for the largest title */
+  --title-2: 2.4rem; /* Font size for secondary titles */
+  --title-3: 1.8rem; /* Font size for tertiary titles */
+  --body: 1.6rem; /* Font size for body text */
+  --label-1: 1.4rem; /* Font size for primary labels */
+  --label-2: 1.2rem; /* Font size for secondary labels */
+
+  /* Font Weight */
+  --weight-regular: 400; /* Regular weight */
+  --weight-medium: 500; /* Medium weight */
+  --weight-semiBold: 600; /* Semi-bold weight */
+  --weight-bold: 700; /* Bold weight */
+
+  /* Border Radius */
+  --radius-8: 8px; /* Border radius for small rounded corners */
+  --radius-12: 12px; /* Border radius for medium rounded corners */
+  --radius-24: 24px; /* Border radius for larger rounded corners */
+  --radius-pill: 500px; /* Pill shape (rounding corners to create pill shape) */
+  --radius-circle: 50%; /* Circular border radius */
+
+  /* Header Height */
+  --header-height: 72px; /* Height of the header */
+}
+
+/* Media Query for Users with No Preference on Reduced Motion */
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    /* Transition Variables for Animation Effects */
+
+    --transition-timing-function: cubic-bezier(
+      0.14,
+      0.97,
+      0.59,
+      1
+    ); /* Timing function for smooth transitions */
+    --transition-short: 150ms var(--transition-timing-function); /* Short transition duration */
+    --transition-medium: 250ms var(--transition-timing-function); /* Medium transition duration */
+    --transition-long: 500ms var(--transition-timing-function); /* Long transition duration */
+  }
+
+  html {
+    scroll-behavior: smooth; /* Enables smooth scrolling behavior */
+  }
+}
+/* Dark Theme Variables - Applied when the page has a data-theme="dark" attribute */
+[data-theme="dark"] {
+  color-scheme: dark; /* Specifies that the color scheme is dark */
+
+  /* Background and Text Colors */
+  --background: var(--background-dark); /* Dark background color */
+  --on-background: var(
+    --on-background-dark
+  ); /* Text color on dark background */
+
+  /* Primary Colors */
+  --primary: var(--primary-dark); /* Primary button or link color */
+  --primary-hover: var(
+    --primary-hover-dark
+  ); /* Hover color for primary elements */
+  --primary-outline: var(
+    --primary-outline-dark
+  ); /* Outline color for primary elements */
+  --primary-outline-hover: var(
+    --primary-outline-hover-dark
+  ); /* Hover outline color for primary elements */
+
+  /* Surface and Text Colors */
+  --surface: var(--surface-dark); /* Dark surface background color */
+  --on-surface: var(--on-surface-dark); /* Text color on dark surfaces */
+  --on-surface-2: var(
+    --on-surface-2-dark
+  ); /* Secondary text color for dark surfaces */
+
+  /* Surface Variants */
+  --surface-variant: var(
+    --surface-variant-dark
+  ); /* Dark surface variant color */
+  --surface-variant-hover: var(
+    --surface-variant-hover-dark
+  ); /* Dark surface variant hover color */
+  --on-surface-variant: var(
+    --on-surface-variant-dark
+  ); /* Text color on dark surface variants */
+  --surface-variant-outline: var(
+    --surface-variant-outline-dark
+  ); /* Outline color for dark surface variants */
+  --surface-variant-outline-hover: var(
+    --surface-variant-outline-hover-dark
+  ); /* Hover outline color for dark surface variants */
+
+  /* Error Colors */
+  --error: var(--error-dark); /* Dark theme error color */
+  --error-alpha-10: var(
+    --error-alpha-10-dark
+  ); /* Error color with transparency */
+
+  /* Outline Colors */
+  --outline: var(--outline-dark); /* Outline color for dark theme */
+
+  /* Surface 1 Colors */
+  --surface-1: var(--surface-1-dark); /* Dark first surface color */
+  --surface-1-hover: var(
+    --surface-1-hover-dark
+  ); /* Hover color for surface 1 */
+  --surface-1-outline: var(
+    --surface-1-outline-dark
+  ); /* Outline color for surface 1 */
+  --surface-1-outline-hover: var(
+    --surface-1-outline-hover-dark
+  ); /* Hover outline color for surface 1 */
+
+  /* Alpha (Opacity) Colors */
+  --alpha-80: var(--alpha-80-dark); /* 80% opacity background */
+  --alpha-70: var(--alpha-70-dark); /* 70% opacity background */
+  --alpha-60: var(--alpha-60-dark); /* 60% opacity background */
+  --alpha-50: var(--alpha-50-dark); /* 50% opacity background */
+  --alpha-10: var(--alpha-10-dark); /* 10% opacity background */
+  --alpha-5: var(--alpha-5-dark); /* 5% opacity background */
+
+  /* Overlay Background */
+  --overlay-bg: var(--overlay-bg-dark); /* Dark theme overlay background */
+}
+
+/* Light Theme Variables - Applied when the page has a data-theme="light" attribute */
+[data-theme="light"] {
+  color-scheme: light; /* Specifies that the color scheme is light */
+
+  /* Background and Text Colors */
+  --background: var(--background-light); /* Light background color */
+  --on-background: var(
+    --on-background-light
+  ); /* Text color on light background */
+
+  /* Primary Colors */
+  --primary: var(--primary-light); /* Primary button or link color */
+  --primary-hover: var(
+    --primary-hover-light
+  ); /* Hover color for primary elements */
+  --primary-outline: var(
+    --primary-outline-light
+  ); /* Outline color for primary elements */
+  --primary-outline-hover: var(
+    --primary-outline-hover-light
+  ); /* Hover outline color for primary elements */
+
+  /* Surface and Text Colors */
+  --surface: var(--surface-light); /* Light surface background color */
+  --on-surface: var(--on-surface-light); /* Text color on light surfaces */
+  --on-surface-2: var(
+    --on-surface-2-light
+  ); /* Secondary text color for light surfaces */
+
+  /* Surface Variants */
+  --surface-variant: var(
+    --surface-variant-light
+  ); /* Light surface variant color */
+  --surface-variant-hover: var(
+    --surface-variant-hover-light
+  ); /* Light surface variant hover color */
+  --on-surface-variant: var(
+    --on-surface-variant-light
+  ); /* Text color on light surface variants */
+  --surface-variant-outline: var(
+    --surface-variant-outline-light
+  ); /* Outline color for light surface variants */
+  --surface-variant-outline-hover: var(
+    --surface-variant-outline-hover-light
+  ); /* Hover outline color for light surface variants */
+
+  /* Error Colors */
+  --error: var(--error-light); /* Light theme error color */
+  --error-alpha-10: var(
+    --error-alpha-10-light
+  ); /* Error color with transparency */
+
+  /* Outline Colors */
+  --outline: var(--outline-light); /* Outline color for light theme */
+
+  /* Surface 1 Colors */
+  --surface-1: var(--surface-1-light); /* Light first surface color */
+  --surface-1-hover: var(
+    --surface-1-hover-light
+  ); /* Hover color for surface 1 */
+  --surface-1-outline: var(
+    --surface-1-outline-light
+  ); /* Outline color for surface 1 */
+  --surface-1-outline-hover: var(
+    --surface-1-outline-hover-light
+  ); /* Hover outline color for surface 1 */
+
+  /* Alpha (Opacity) Colors */
+  --alpha-80: var(--alpha-80-light); /* 80% opacity background */
+  --alpha-70: var(--alpha-70-light); /* 70% opacity background */
+  --alpha-60: var(--alpha-60-light); /* 60% opacity background */
+  --alpha-50: var(--alpha-50-light); /* 50% opacity background */
+  --alpha-10: var(--alpha-10-light); /* 10% opacity background */
+  --alpha-5: var(--alpha-5-light); /* 5% opacity background */
+
+  /* Overlay Background */
+  --overlay-bg: var(--overlay-bg-light); /* Light theme overlay background */
+}
+
+/* Reset Styling */
+
+/* Apply margin and padding reset to all elements and pseudo-elements */
+*,
+*::before,
+*::after {
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  box-sizing: border-box; /* Ensure that padding and border are included in the element's total width and height */
+}
+
+/* Remove default list styling from <li> */
+li {
+  list-style: none; /* Remove bullet points or numbers from list items */
+}
+
+/* Set display properties for common elements */
+a,
+img,
+svg,
+span,
+input,
+button {
+  display: block; /* Make these elements block-level, meaning they take up the full width of their container */
+}
+
+/* Style anchor tags */
+a {
+  text-decoration: none; /* Remove default underline from links */
+  color: inherit; /* Inherit the text color from its parent element */
+}
+
+/* Style images */
+img {
+  height: auto; /* Ensure images maintain their aspect ratio and do not stretch */
+}
+
+/* Style input and button elements */
+input,
+button {
+  background: none; /* Remove default background */
+  border: none; /* Remove default border */
+  font: inherit; /* Inherit font styling from parent element */
+}
+
+/* Style input element */
+input {
+  width: 100%; /* Make input elements take up 100% of their container width */
+}
+
+/* Style button element */
+button {
+  cursor: pointer; /* Change cursor to pointer on hover to indicate it's clickable */
+}
+
+/* HTML styling */
+html {
+  font-size: var(
+    --base-font-size
+  ); /* Set the base font size based on CSS variable */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight color on mobile devices */
+}
+
+/* Body styling */
+body {
+  color: var(--on-background); /* Text color based on background theme */
+  background: var(--background); /* Set background color based on theme */
+  font-family: var(--font-primary); /* Use the primary font family */
+  font-size: var(--label-1); /* Set font size for general text */
+  font-weight: var(--weight-regular); /* Use regular font weight */
+  line-height: 20px; /* Set line height for text */
+  letter-spacing: 0.2px; /* Add slight letter spacing */
+  min-height: 100vh; /* Set minimum height to fill the viewport */
+  min-height: 100dvh; /* For mobile devices, ensure minimum height takes device's dynamic viewport height */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  padding-block: var(--header-height) 16px; /* Add padding above and below content */
+}
+
+/* Styling for scrollbars */
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: var(
+    --surface-variant
+  ); /* Set the background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface-variant); /* Set the color of the scrollbar thumb */
+  border-radius: var(
+    --radius-pill
+  ); /* Round the corners of the scrollbar thumb */
+}
+
+/* Utility Styling */
+
+/* Primary text color utility */
+.text-primary {
+  color: var(--primary); /* Apply primary color to text */
+}
+
+/* Error text color utility */
+.text-error {
+  color: var(--error); /* Apply error color to text */
+}
+
+/* Reused Styles */
+
+/* Container styling */
+.container {
+  padding-inline: 16px; /* Add horizontal padding */
+  max-width: 1280px; /* Set maximum width for the container */
+  width: 100%; /* Ensure container takes up full width */
+  margin-inline: auto; /* Center the container horizontally */
+}
+
+/* Material icon styling */
+.material-symbols-rounded {
+  width: 1em; /* Set width of material icon */
+  height: 1em; /* Set height of material icon */
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24; /* Set font variations for Material icons */
+}
+
+/* Image holder styling with aspect ratio */
+.img-holder {
+  aspect-ratio: var(--width) / var(--height); /* Maintain aspect ratio for images */
+  background-color: var(
+    --alpha-50
+  ); /* Apply background color with 50% opacity */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+/* Avatar circle styling */
+.avatar-circle {
+  border-radius: var(
+    --radius-circle
+  ); /* Create a circle by applying border-radius */
+}
+
+/* Avatar rounded styling */
+.avatar-rounded {
+  border-radius: var(--radius-24); /* Apply rounded corners with 24px radius */
+}
+
+/* Cover image styling */
+.cover-img {
+  width: 100%; /* Make the cover image take up the full width of its container */
+  height: 100%; /* Make the cover image take up the full height of its container */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Title 1 styling */
+.title-1 {
+  font-size: var(--title-1); /* Set font size for title 1 */
+  font-weight: var(--weight-medium); /* Set font weight for title 1 */
+  line-height: 72px; /* Set line height for title 1 */
+}
+
+/* Title 2 styling */
+.title-2 {
+  font-size: var(--title-2); /* Set font size for title 2 */
+  font-weight: var(--weight-semiBold); /* Set font weight for title 2 */
+  line-height: 28px; /* Set line height for title 2 */
+}
+
+/* Title 3 styling */
+.title-3 {
+  font-size: var(--title-3); /* Set font size for title 3 */
+  font-weight: var(--weight-regular); /* Set font weight for title 3 */
+  line-height: 24px; /* Set line height for title 3 */
+}
+
+/* Body text styling */
+.body {
+  font-size: var(--body-1); /* Set font size for body text */
+}
+
+/* Label 1 text styling */
+.label-1 {
+  font-size: var(--label-1); /* Set font size for label 1 */
+}
+
+/* Label 2 text styling */
+.label-2 {
+  font-size: var(--label-2); /* Set font size for label 2 */
+}
+
+/* Screen reader only styling */
+.sr-only {
+  position: absolute; /* Position element off-screen */
+  width: 1px; /* Set width to 1px */
+  height: 1px; /* Set height to 1px */
+  padding: 0; /* Remove padding */
+  margin: -1px; /* Remove margin */
+  overflow: hidden; /* Hide overflow content */
+  clip: rect(0, 0, 0, 0); /* Clip content to make it invisible */
+  white-space: nowrap; /* Prevent line breaks */
+  border-width: 0; /* Remove border */
+}
+
+/* All Components Styling */
+
+/* Icon button */
+.icon-btn {
+  background-color: var(--surface-variant); /* Set background color */
+  min-width: 48px; /* Minimum width of 48px */
+  width: 48px; /* Fixed width of 48px */
+  height: 48px; /* Fixed height of 48px */
+  border-radius: var(--radius-circle); /* Circular border radius */
+  border: 1px solid var(--surface-variant-outline); /* Border with surface variant outline color */
+  display: grid; /* Use grid layout */
+  place-items: center; /* Center content within the button */
+  transition: var(--transition-short); /* Apply short transition */
+  transition-property: background-color, border-color; /* Transition only background color and border color */
+}
+
+/* Hover and focus-visible states for icon button */
+.icon-btn:where(:hover, :focus-visible):not(:active) {
+  background-color: var(
+    --surface-variant-hover
+  ); /* Change background on hover */
+  border-color: var(
+    --surface-variant-outline-hover
+  ); /* Change border color on hover */
+}
+
+/* Icon inside icon button */
+.icon-btn .material-symbols-rounded {
+  color: var(--on-background); /* Set color of icon */
+}
+
+/* Search box */
+.search-box .leading-icon,
+.search-btn .label-1 {
+  display: none; /* Hide leading icon and search button label */
+}
+
+.search-box {
+  position: relative; /* Position the box relative to its parent */
+  border-radius: var(--radius-pill); /* Apply pill border radius */
+  overflow: hidden; /* Hide any overflowing content */
+  flex-grow: 1; /* Allow the search box to grow and take available space */
+}
+
+.search-field {
+  height: 48px; /* Set the height of the search field */
+  line-height: 48px; /* Align text vertically in the field */
+  background-color: var(--surface-variant); /* Set background color */
+  padding-inline: 16px 64px; /* Add padding inside the search field */
+  border-radius: inherit; /* Inherit border radius from parent */
+  outline: none; /* Remove outline */
+}
+
+/* Focus state for search field */
+.search-field:focus {
+  box-shadow: inset 0 0 0 2px var(--primary); /* Add inner border with primary color */
+}
+
+/* Placeholder text styling */
+.search-field::placeholder {
+  color: var(--alpha-60); /* Set color for placeholder text */
+}
+
+/* Search button styling */
+.search-btn {
+  position: absolute; /* Position the button absolutely */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 48px; /* Fixed width of 48px */
+  background-color: var(--primary); /* Set background color */
+  color: var(--white); /* Set text color */
+  font-weight: var(--weight-medium); /* Set font weight */
+  display: grid; /* Use grid layout */
+  place-items: center; /* Center the button content */
+  border-radius: var(--radius-pill); /* Apply pill border radius */
+  transition: var(--transition-short); /* Apply short transition */
+}
+
+/* Hover and focus-visible states for search button */
+.search-btn:where(:hover, :focus-visible):not(:active) {
+  background-color: var(--primary-hover); /* Change background color on hover */
+}
+
+/* Button */
+.btn {
+  padding-inline: 24px; /* Add horizontal padding */
+  height: 40px; /* Set height */
+  font-size: var(--label-1); /* Set font size */
+  font-weight: var(--weight-medium); /* Set font weight */
+  border-radius: var(--radius-8); /* Set border radius */
+  border: 1px solid transparent; /* Transparent border */
+  max-width: max-content; /* Set maximum width to fit content */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  gap: 8px; /* Add space between elements */
+  align-items: center; /* Align content vertically */
+  line-height: 40px; /* Set line height */
+  transition: var(--transition-short); /* Apply short transition */
+}
+
+/* Primary button styling */
+.btn-primary {
+  background-color: var(--primary); /* Set primary background color */
+  color: var(--white); /* Set text color */
+  border-color: var(--primary-outline); /* Set border color */
+}
+
+/* Hover and focus-visible states for primary button */
+.btn-primary:where(:hover, :focus-visible):not(:active) {
+  background-color: var(--primary-hover); /* Change background on hover */
+  border-color: var(--primary-outline-hover); /* Change border color on hover */
+}
+
+/* Secondary button styling */
+.btn-secondary {
+  background-color: var(--surface-1); /* Set secondary background color */
+  color: var(--primary); /* Set text color */
+  border-color: var(--surface-1-outline); /* Set border color */
+}
+
+/* Hover and focus-visible states for secondary button */
+.btn-secondary:where(:hover, :focus-visible):not(:active) {
+  background-color: var(--surface-1-hover); /* Change background on hover */
+  border-color: var(
+    --surface-1-outline-hover
+  ); /* Change border color on hover */
+}
+
+/* Tab navigation */
+.tab-list {
+  display: flex; /* Use flexbox for horizontal layout */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  scrollbar-width: none; /* Hide scrollbar */
+  border-block-end: 1px solid var(--alpha-5); /* Add bottom border */
+}
+
+/* Tab button styling */
+.tab-btn {
+  position: relative; /* Position tab button relative to parent */
+  height: 48px; /* Set height */
+  padding-inline: 20px; /* Add horizontal padding */
+  font-size: var(--label-1); /* Set font size */
+  margin-block-end: 4px; /* Add margin at the bottom */
+  border-radius: var(--radius-8); /* Set border radius */
+  opacity: 0.8; /* Set initial opacity */
+  flex: 1 0 25%; /* Make tab buttons flexible and take 25% of the width */
+  transform: var(--transition-short); /* Apply transition for transformations */
+}
+
+/* Hover and focus-visible states for tab button */
+.tab-btn:where(:hover, :focus-visible):not(:active) {
+  opacity: 1; /* Set opacity to full on hover */
+  background-color: var(--alpha-5); /* Change background on hover */
+}
+
+/* Active tab button styling */
+.tab-btn[aria-selected="true"] {
+  font-weight: var(--weight-medium); /* Set font weight */
+  opacity: 1; /* Set opacity to full */
+}
+
+/* Active tab indicator */
+.tab-btn[aria-selected="true"]::after {
+  content: ""; /* Empty content for the indicator */
+  position: absolute; /* Position the indicator absolutely */
+  top: 100%; /* Place it at the bottom of the button */
+  left: 0;
+  width: 100%; /* Set width to 100% of the button */
+  height: 4px; /* Set height */
+  background-color: var(--primary); /* Set color of the indicator */
+  border-radius: var(
+    --radius-pill
+  ); /* Apply rounded corners to the indicator */
+}
+
+/* Card */
+.card {
+  --spacing: 16px; /* Set spacing variable */
+
+  background-color: var(--surface); /* Set card background color */
+  border-radius: var(--radius-12); /* Apply border radius */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.card :where(.card-body, .card-footer) {
+  padding: var(--spacing); /* Apply padding to card body and footer */
+}
+
+/* Badge */
+.badge {
+  background-color: var(--surface-variant); /* Set background color */
+  color: var(--alpha-60); /* Set text color */
+  max-width: max-content; /* Allow badge width to fit content */
+  font-size: var(--label-2); /* Set font size */
+  font-weight: var(--weight-semiBold); /* Set font weight */
+  text-transform: uppercase; /* Transform text to uppercase */
+  height: 24px; /* Set height */
+  line-height: 24px; /* Set line height */
+  padding-inline: 12px; /* Add horizontal padding */
+  border-radius: var(--radius-pill); /* Apply rounded corners */
+  border: 1px solid var(--surface-variant-outline); /* Set border color */
+}
+
+/* Repository card */
+
+/* Styling for repository card container */
+.repo-card {
+  position: relative; /* Position the card relatively for absolute positioning of other elements */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Arrange children elements in a column */
+}
+
+/* Card body takes available space */
+.repo-card .card-body {
+  flex-grow: 1; /* Allow card body to grow and fill remaining space */
+}
+
+/* Card title styling */
+.repo-card .card-title {
+  max-width: max-content; /* Make the title width match its content */
+  padding-inline-end: 76px; /* Add right padding for the title */
+  transition: var(
+    --transition-short
+  ); /* Smooth transition for hover/focus states */
+}
+
+/* Title color changes on hover or focus */
+.repo-card .card-title:where(:hover, :focus-visible) {
+  color: var(--primary); /* Change text color to primary on hover/focus */
+}
+
+/* Card text styling */
+.repo-card .card-text {
+  color: var(--on-surface-variant); /* Set text color */
+  display: -webkit-box; /* Use webkit box for text clamping */
+  -webkit-box-orient: vertical; /* Set text direction to vertical for clamping */
+  overflow-y: hidden; /* Hide overflow text vertically */
+  -webkit-line-clamp: 2; /* Limit text to 2 lines */
+  line-clamp: 2; /* Limit text to 2 lines */
+  margin-block-start: 8px; /* Add top margin to text */
+}
+
+/* Badge positioning in the top right corner */
+.repo-card .badge {
+  position: absolute; /* Position badge absolutely within the card */
+  top: var(--spacing); /* Position badge from the top */
+  right: var(--spacing); /* Position badge from the right */
+}
+
+/* Card footer styling */
+.repo-card .card-footer {
+  background-color: var(--surface-variant); /* Set background color */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  gap: var(--spacing); /* Add space between items */
+}
+
+/* Meta item styling inside the card footer */
+.repo-card .meta-item {
+  color: var(--on-surface); /* Set text color for meta items */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  gap: 4px; /* Add space between items */
+}
+
+/* Follower card */
+
+/* Follower card container */
+.follower-card {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  gap: var(--spacing); /* Add space between items */
+  padding: var(--spacing); /* Add padding inside the card */
+}
+
+/* Styling for follower avatar */
+.follower-card .avatar-circle {
+  width: 56px; /* Set avatar width */
+  height: 56px; /* Set avatar height */
+  flex-shrink: 0; /* Prevent avatar from shrinking */
+}
+
+/* Styling for icon button in follower card */
+.follower-card .icon-btn {
+  margin-inline-start: auto; /* Push icon button to the right */
+}
+
+/* Title styling for follower card */
+.follower-card .card-title {
+  font-size: var(--body); /* Set font size */
+  font-weight: var(--weight-regular); /* Set regular font weight */
+}
+
+/* Skeleton */
+
+/* Styling for avatar skeleton */
+.avatar-skeleton {
+  width: 160px; /* Set skeleton width */
+  height: 160px; /* Set skeleton height */
+  border-radius: var(--radius-circle); /* Make it a circle */
+  background-color: var(
+    --alpha-10
+  ); /* Set background color with transparency */
+}
+
+/* Styling for title skeleton */
+.title-skeleton,
+.text-skeleton {
+  border-radius: var(--radius-pill); /* Round the corners */
+}
+
+/* Title skeleton specific styling */
+.title-skeleton {
+  max-width: 180px; /* Set max width */
+  width: 100%; /* Make it full width */
+  height: 24px; /* Set height */
+  background-color: var(
+    --alpha-10
+  ); /* Set background color with transparency */
+}
+
+/* Text skeleton specific styling */
+.text-skeleton {
+  background-color: var(
+    --alpha-5
+  ); /* Set background color with less transparency */
+  height: 16px; /* Set height */
+}
+
+/* Profile skeleton styling */
+.profile-skeleton,
+.title-skeleton {
+  margin-block: 24px; /* Add margin above and below the skeleton */
+}
+
+/* Add margin to text skeleton inside profile skeleton */
+.profile-skeleton .text-skeleton {
+  margin-block-start: 12px; /* Add margin to the top of text skeleton */
+}
+
+/* Set width for profile skeleton's text items */
+.profile-skeleton .text-1 {
+  width: 55%; /* Set width to 55% */
+}
+
+.profile-skeleton .text-3 {
+  width: 70%; /* Set width to 70% */
+}
+
+/* General skeleton layout */
+.skeleton {
+  position: relative; /* Position the skeleton relatively */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+/* Add shimmering effect to skeleton */
+.skeleton::before {
+  content: ""; /* Empty content to create the shimmer */
+  position: absolute; /* Position absolutely within the skeleton */
+  top: 0; /* Position at the top */
+  left: -100%; /* Start off-screen to the left */
+  width: 100%; /* Set width to full skeleton width */
+  height: 100%; /* Set height to full skeleton height */
+  background-image: linear-gradient(
+    /* Create a shimmering gradient */ 90deg,
+    transparent,
+    var(--alpha-10),
+    transparent
+  );
+  animation: skeleton-loading 1.5s linear infinite; /* Apply loading animation */
+}
+
+/* Keyframes for skeleton shimmering effect */
+@keyframes skeleton-loading {
+  0% {
+    transform: translateX(0); /* Start from the left */
+  }
+  100% {
+    transform: translateX(200%); /* Move to the right */
+  }
+}
+
+/* Repo skeleton styling */
+.repo-skeleton,
+.follower-skeleton {
+  background-color: var(--alpha-5); /* Set background color with transparency */
+}
+
+/* Text skeleton styling inside repo skeleton */
+.repo-skeleton .text-1 {
+  margin-block: 12px; /* Add margin above the first text skeleton */
+}
+
+/* Width setting for second text skeleton in repo skeleton */
+.repo-skeleton .text-2 {
+  width: 70%; /* Set width to 70% */
+}
+
+/* Footer styling for repo skeleton */
+.repo-skeleton .card-footer {
+  display: flex; /* Use flexbox for footer layout */
+  gap: var(--spacing); /* Add space between items */
+  border-block-start: 1px solid var(--alpha-5); /* Add top border */
+}
+
+/* Footer text skeleton specific styling */
+.repo-skeleton .card-footer .text-skeleton {
+  max-width: 56px; /* Limit width of text skeleton */
+  flex-grow: 1; /* Allow text skeleton to grow and fill space */
+}
+
+/* Follower skeleton container */
+.follower-skeleton {
+  display: flex; /* Use flexbox layout */
+  align-items: center; /* Align items vertically */
+  padding: var(--spacing); /* Add padding inside the card */
+  gap: var(--spacing); /* Add space between items */
+}
+
+/* Styling for avatar skeleton inside follower skeleton */
+.follower-skeleton .avatar-skeleton {
+  width: 56px; /* Set avatar skeleton width */
+  height: 56px; /* Set avatar skeleton height */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Skip To Content */
+
+/* Styling for "Skip to content" button */
+.skip-to-content {
+  position: fixed; /* Fix the button at the top left */
+  top: 4px; /* Position 4px from top */
+  left: 4px; /* Position 4px from left */
+  height: 56px; /* Set height */
+  display: grid; /* Use grid layout */
+  place-items: center; /* Center content within the button */
+  background-color: var(--on-background); /* Set background color */
+  padding-inline: 24px; /* Add padding left and right */
+  color: var(--background); /* Set text color */
+  font-size: var(--label-1); /* Set font size */
+  font-weight: var(--weight-medium); /* Set font weight */
+  border-radius: var(--radius-8); /* Round corners */
+  outline-offset: 2px; /* Add outline offset */
+  opacity: 0; /* Set initial opacity to 0 (hidden) */
+  z-index: 5; /* Place above other elements */
+  pointer-events: none; /* Disable interactions by default */
+}
+
+/* Styling when "Skip to content" is focused */
+.skip-to-content:focus-visible {
+  opacity: 1; /* Make the button visible */
+  pointer-events: all; /* Enable interactions */
+}
+
+/* Header Section Styling */
+
+/* Header container */
+.header {
+  background-color: var(--background); /* Set background color */
+  position: fixed; /* Fix header at the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Set full width */
+  height: var(--header-height); /* Set custom header height */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  z-index: 4; /* Ensure it's above other elements */
+  transition: background-color var(--transition-short); /* Transition background color */
+}
+
+/* Active header state styling */
+.header.active {
+  background-color: var(--surface); /* Change background color when active */
+}
+
+/* Header content container */
+.header .container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  gap: 16px; /* Add space between items */
+}
+
+/* Logo styling */
+.logo {
+  color: var(--on-background); /* Set logo text color */
+  font-size: 26px; /* Set logo font size */
+  font-weight: var(--weight-bold); /* Set logo font weight */
+  line-height: 26px; /* Set line height */
+}
+
+/* Primary text color in the logo */
+.logo .text-primary {
+  display: inline; /* Make primary text inline */
+}
+
+/* Header search bar styling */
+.header-search {
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Align items vertically */
+  gap: 8px; /* Add space between items */
+  flex-grow: 1; /* Allow search bar to grow */
+}
+
+/* Adjust search bar layout when not active */
+.header:not(.search-active) .header-search {
+  margin-inline-start: auto; /* Push search bar to the right */
+}
+
+/* Hide various elements when header is not in search mode */
+.header:not(.search-active) .search-box,
+.header.search-active :where(.logo, .theme-btn),
+.search-toggler[aria-expanded="true"] .search-icon,
+.search-toggler[aria-expanded="false"] .close-icon,
+[data-theme="dark"] .theme-btn .moon-icon,
+[data-theme="light"] .theme-btn .sun-icon {
+  display: none; /* Hide these elements */
+}
+
+/* Profile Section Styling */
+
+/* Main container */
+.main {
+  flex-grow: 1; /* Allow the main container to grow and take up remaining space */
+  scroll-margin-top: var(
+    --header-height
+  ); /* Offset scroll position to avoid header overlap */
+}
+
+/* Profile styling */
+.profile {
+  margin-block-end: 24px; /* Add margin to the bottom of the profile */
+}
+
+/* Avatar styling (for both circle and rounded avatars) */
+.profile :where(.avatar-circle, .avatar-rounded) {
+  width: 160px; /* Set width of avatar to 160px */
+}
+
+/* Title 2 margin for profile */
+.profile .title-2 {
+  margin-block: 16px 4px; /* Add top and bottom margin to the title */
+}
+
+/* Username styling */
+.username {
+  line-height: 20px; /* Set line-height for username */
+  margin-block-end: 12px; /* Add margin below the username */
+}
+
+/* Bio styling */
+.profile .bio {
+  margin-block: 12px; /* Add margin above and below the bio */
+  max-width: 80ch; /* Limit the bio's width to 80 characters */
+}
+
+/* Secondary button width in profile */
+.profile .btn-secondary {
+  max-width: 100%; /* Ensure secondary button takes up full width */
+}
+
+/* Meta section in profile */
+.profile-meta {
+  margin-block: 24px; /* Add margin above and below the meta section */
+}
+
+/* Styling for meta items and statistics */
+.profile-meta .meta-item,
+.profile-stats .stat-item {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  gap: 8px; /* Add space between items */
+  margin-block: 8px; /* Add margin between items */
+}
+
+/* Meta text styling */
+.profile-meta .meta-text {
+  font-size: var(--label-1); /* Set font size for meta text */
+  min-width: 0; /* Ensure text can shrink */
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-overflow: ellipsis; /* Add ellipsis when text overflows */
+  overflow: hidden; /* Hide overflowing text */
+  transform: var(--transition-short); /* Apply transition effect */
+}
+
+/* Hover and focus effect for meta text links */
+.profile-meta a.meta-text:where(:hover, :focus-visible) {
+  color: var(--primary); /* Change text color on hover/focus */
+}
+
+/* Stat item styling */
+.profile-stats .stat-item {
+  color: var(--on-surface-variant); /* Set color for stat items */
+}
+
+/* Stat body styling */
+.profile-stats .body {
+  color: var(--on-background); /* Set color for body text */
+  font-weight: var(--weight-medium); /* Set medium font weight */
+}
+
+/* Footer in profile (hidden by default) */
+.profile .footer {
+  display: none; /* Hide footer by default */
+}
+
+/* Tab Section Styling */
+
+/* Tab list container */
+.tab-container .tab-list {
+  margin-inline: -16px; /* Apply negative margin to remove excess padding */
+  padding-inline: 16px; /* Add padding on left and right sides */
+}
+
+/* Tab panel styling */
+.tab-panel {
+  display: flex; /* Use flexbox layout */
+  justify-content: flex-start; /* Align items to the start */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 16px; /* Add space between items */
+  padding-block-start: 16px; /* Add top padding */
+}
+
+/* Hide tab panel when it's not visible */
+.tab-panel[hidden] {
+  display: none; /* Hide panel when it's marked as hidden */
+}
+
+/* Card styling inside tab panel */
+.tab-panel .card {
+  flex-grow: 1; /* Allow card to grow and take available space */
+  width: 100%; /* Make card take full width */
+}
+
+/* Error content inside tab panel */
+.tab-panel .error-content {
+  width: 100%; /* Make error content full width */
+  padding-block: 96px; /* Add top and bottom padding */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Arrange error content vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Error title styling */
+.tab-panel .error-content .title-1 {
+  color: var(--alpha-50); /* Set color with opacity for the title */
+}
+
+/* Error text styling */
+.tab-panel .error-content .text {
+  color: var(--alpha-80); /* Set color with less opacity for the text */
+}
+
+/* Error Section Styling */
+
+/* Error container styling */
+.error {
+  position: fixed; /* Fix the error container to the top */
+  top: var(--header-height); /* Position it below the header */
+  left: 0; /* Align it to the left */
+  width: 100%; /* Make it full width */
+  height: calc(100vh - var(--header-height)); /* Adjust height to fill screen */
+  height: calc(
+    100dvh - var(--header-height)
+  ); /* Handle dynamic viewport height */
+  background-color: var(--background); /* Set background color */
+  display: grid; /* Use grid to center content */
+  place-content: center; /* Center content in grid */
+  gap: 8px; /* Add space between elements */
+  text-align: center; /* Center text */
+  z-index: 2; /* Ensure it's above other elements */
+  display: none; /* Hide by default */
+}
+
+/* Error title styling */
+.error .title-1 {
+  color: var(--alpha-50); /* Set color with opacity for the title */
+}
+
+/* Error text styling */
+.error .text {
+  color: var(--alpha-80); /* Set color with opacity for the text */
+}
+
+/* Footer Section Styling */
+
+/* Footer container styling */
+.footer {
+  padding-block-start: 16px; /* Add top padding */
+  border-block-start: 1px solid var(--outline); /* Add top border */
+  margin-block-start: 16px; /* Add bottom margin */
+}
+
+/* Copyright text styling */
+.copyright {
+  color: var(--on-surface-2); /* Set copyright text color */
+}
+
+/* Media Queries */
+
+/* Styling for screens larger than 768px */
+@media screen and (min-width: 768px) {
+  /* Custom value for header height */
+  :root {
+    --header-height: 80px; /* Set custom header height */
+  }
+
+  /* Reused styling */
+  body {
+    padding-block: calc(var(--header-height) + 16px) 32px; /* Add top padding considering header height */
+  }
+
+  .container {
+    padding-inline: 36px; /* Add left and right padding */
+  }
+
+  /* Card component spacing */
+  .card {
+    --spacing: 24px; /* Set custom spacing inside cards */
+  }
+
+  /* Skeleton component */
+  .avatar-skeleton {
+    width: 200px; /* Set skeleton width to 200px */
+    height: 200px; /* Set skeleton height to 200px */
+  }
+
+  /* Header adjustments */
+  .search-btn .material-symbols-rounded,
+  .search-toggler {
+    display: none; /* Hide search button and toggler */
+  }
+
+  .search-box .leading-icon,
+  .search-btn .label-1,
+  .header:not(.search-active) .search-box {
+    display: block; /* Display search box and icons */
+  }
+
+  .search-box .leading-icon {
+    position: absolute; /* Position search icon absolutely */
+    top: 50%; /* Vertically center the icon */
+    left: 16px; /* Position the icon 16px from the left */
+    transform: translateY(-50%); /* Adjust vertical position */
+  }
+
+  .search-field {
+    padding-inline: 56px 88px; /* Add padding inside the search field */
+  }
+
+  .search-btn {
+    width: max-content; /* Set button width to content size */
+    padding-inline: 16px; /* Add horizontal padding */
+  }
+
+  .header-search {
+    max-width: 360px; /* Limit the search bar width */
+  }
+
+  /* Profile container adjustments */
+  .main .container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 240px 1fr; /* Set two-column layout with avatar in the left column */
+    gap: 36px; /* Add space between columns */
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  .profile :where(.avatar-circle, .avatar-rounded) {
+    width: 200px; /* Increase avatar size to 200px */
+  }
+
+  .profile {
+    margin-block-end: 0; /* Remove bottom margin from profile */
+    position: sticky; /* Make profile sticky on the page */
+    top: calc(
+      var(--header-height) + 16px
+    ); /* Position sticky profile just below the header */
+  }
+
+  .profile .footer {
+    display: block; /* Show footer when screen is larger */
+    margin-block-start: 24px; /* Add margin above footer */
+  }
+
+  /* Tab container styling adjustments */
+  .tab-container .tab-list {
+    margin-inline: 0; /* Reset margin */
+    padding-inline: 0; /* Reset padding */
+  }
+
+  /* Footer section */
+  footer.footer {
+    display: none; /* Hide footer for larger screens */
+  }
+}
+
+/* Styling for screens larger than 990px */
+@media screen and (min-width: 990px) {
+  /* Reused styling */
+  .container {
+    padding-inline: 32px; /* Adjust padding for larger screens */
+  }
+
+  /* Skeleton component adjustments */
+  .avatar-skeleton {
+    width: 280px; /* Increase skeleton size to 280px */
+    height: 280px; /* Increase skeleton height to 280px */
+  }
+
+  /* Profile container styling adjustments */
+  .main .container {
+    grid-template-columns: 280px 1fr; /* Adjust grid columns for larger screens */
+  }
+
+  .profile :where(.avatar-circle, .avatar-rounded) {
+    width: 280px; /* Increase avatar size to 280px */
+  }
+}
+
+/* Styling for screens larger than 1100px */
+@media screen and (min-width: 1100px) {
+  /* Adjust tab card max-width for larger screens */
+  .tab-panel .card {
+    max-width: calc(
+      50% - 8px
+    ); /* Make cards take up 50% of the width with space between */
+  }
+}

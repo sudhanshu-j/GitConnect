@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+  <!-- The document type is defined as HTML5, and the language is set to English. The text direction is left to right (ltr) and the theme is dark. -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Specifies the character encoding for the document as UTF-8. This ensures support for special characters. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the website responsive by setting the viewport to the width of the device and setting the initial zoom level to 1. -->
+
+    <!-- Title -->
+    <title>GitConnect - GitHub Clone</title>
+    <!-- Sets the title of the webpage that appears in the browser tab. -->
+
+    <!-- Favicon SVG -->
+    <link rel="shortcut icon " href="/fav/favicon.svg" type="image/svg+xml" />
+    <!-- Specifies a favicon (small icon displayed in the browser tab) for the website in SVG format. -->
+
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- Links the external CSS file that defines the styling for the webpage. -->
+
+    <!-- JavaScript Theme Link -->
+    <script src="/assets/js/theme.js"></script>
+    <!-- Links a JavaScript file that likely handles the theme switching (dark/light mode). -->
+
+    <!-- Material Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0"
+    />
+    <!-- Links the Material Icons font from Google Fonts, used to render various icons in the UI. -->
+
+    <!-- Custom JavaScript -->
+    <script src="/assets/js/app.js" type="module"></script>
+    <!-- Links the main JavaScript file for custom functionality on the webpage, imported as a module. -->
+  </head>
+
+  <body>
+    <!-- Skip To Content -->
+    <a href="#main" class="skip-to-content"> Skip To Content </a>
+    <!-- Provides a link to skip directly to the main content, improving accessibility for keyboard and screen reader users. -->
+
+    <!-- Header Section -->
+    <header class="header" data-header>
+      <!-- The header contains the main navigation and branding for the website. -->
+      <div class="container">
+        <a href="/index.html" class="logo">
+          <span class="text-primary"> Git</span>Connect
+        </a>
+        <!-- A logo linking to the main content of the webpage. -->
+
+        <div class="header-search">
+          <button
+            class="icon-btn search-toggler"
+            aria-controls="searchBox"
+            aria-expanded="false"
+            aria-label="Toggle search"
+            data-search-toggler
+          >
+            <!-- Button to toggle the visibility of the search box. -->
+            <span
+              class="material-symbols-rounded search-icon"
+              aria-hidden="true"
+              >search</span
+            >
+            <!-- The search icon displayed on the button. -->
+
+            <span class="material-symbols-rounded close-icon" aria-hidden="true"
+              >arrow_back</span
+            >
+            <!-- The close (back) icon displayed when the search box is open. -->
+          </button>
+
+          <div class="search-box" id="searchBox">
+            <!-- The search box element itself, initially hidden. -->
+            <span
+              class="material-symbols-rounded leading-icon"
+              aria-hidden="true"
+              >search</span
+            >
+            <!-- Leading icon inside the search box. -->
+
+            <input
+              type="search"
+              name="search"
+              aria-label="Search Github Username"
+              placeholder="Search Username"
+              class="search-field label-1"
+              data-search-field
+            />
+            <!-- The input field for the user to enter the GitHub username to search for. -->
+
+            <button
+              class="search-btn"
+              aria-label="Search Submit"
+              data-search-submit
+            >
+              <span class="material-symbols-rounded" aria-hidden="true"
+                >search</span
+              >
+              <!-- The button to submit the search, represented by a search icon. -->
+
+              <span class="label-1">Search</span>
+              <!-- The "Search" label next to the icon. -->
+            </button>
+          </div>
+        </div>
+
+        <button
+          class="icon-btn theme-btn"
+          aria-pressed="false"
+          aria-label="Toggle dark and light theme"
+          data-theme-btn
+        >
+          <!-- Button to toggle between dark and light themes. -->
+          <span class="material-symbols-rounded sun-icon" aria-hidden="true"
+            >light_mode</span
+          >
+          <!-- Sun icon for light mode. -->
+
+          <span class="material-symbols-rounded moon-icon" aria-hidden="true"
+            >dark_mode</span
+          >
+          <!-- Moon icon for dark mode. -->
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main" id="main">
+      <!-- Main content section of the webpage, identified with an ID for internal navigation. -->
+      <div class="container">
+        <!-- Container for holding content inside the main section. -->
+
+        <!-- Profile Section -->
+        <section class="profile" data-profile-card></section>
+        <!-- Empty section for the profile card that will be populated dynamically with user data. -->
+
+        <!-- Tab Section -->
+        <section class="tab-container" data-tab-section>
+          <div class="tab-list" aria-label="Tab Navigation" role="tablist">
+            <!-- Tab navigation buttons. -->
+            <button
+              class="tab-btn"
+              aria-selected="true"
+              role="tab"
+              id="tab-1"
+              tabindex="0"
+              aria-controls="panel-1"
+              data-tab-btn
+            >
+              Repositories
+            </button>
+            <!-- Tab button for repositories, initially selected. -->
+
+            <button
+              class="tab-btn"
+              aria-selected="false"
+              role="tab"
+              id="tab-2"
+              tabindex="-1"
+              aria-controls="panel-2"
+              data-tab-btn
+              data-forked-tab-btn
+            >
+              Forked
+            </button>
+            <!-- Tab button for forked repositories, initially not selected. -->
+
+            <button
+              class="tab-btn"
+              aria-selected="false"
+              role="tab"
+              id="tab-3"
+              tabindex="-1"
+              aria-controls="panel-3"
+              data-tab-btn
+              data-follower-tab-btn
+            >
+              Followers
+            </button>
+            <!-- Tab button for followers, initially not selected. -->
+
+            <button
+              class="tab-btn"
+              aria-selected="false"
+              role="tab"
+              id="tab-4"
+              tabindex="-1"
+              aria-controls="panel-4"
+              data-tab-btn
+              data-following-tab-btn
+            >
+              Following
+            </button>
+            <!-- Tab button for following, initially not selected. -->
+          </div>
+
+          <div
+            class="tab-panel"
+            role="tabpanel"
+            id="panel-1"
+            tabindex="0"
+            aria-labelledby="tab-1"
+            data-tab-panel
+            data-repo-panel
+          ></div>
+          <!-- Panel for displaying repositories. It is initially active. -->
+
+          <div
+            class="tab-panel"
+            role="tabpanel"
+            id="panel-2"
+            tabindex="0"
+            aria-labelledby="tab-2"
+            data-tab-panel
+            data-forked-panel
+            hidden
+          >
+            <!-- Panel for displaying forked repositories, initially hidden. -->
+          </div>
+
+          <div
+            class="tab-panel"
+            role="tabpanel"
+            id="panel-3"
+            tabindex="0"
+            aria-labelledby="tab-3"
+            data-tab-panel
+            data-follower-panel
+            hidden
+          ></div>
+          <!-- Panel for displaying followers, initially hidden. -->
+
+          <div
+            class="tab-panel"
+            role="tabpanel"
+            id="panel-4"
+            tabindex="0"
+            aria-labelledby="tab-4"
+            data-tab-panel
+            data-following-panel
+            hidden
+          ></div>
+          <!-- Panel for displaying following users, initially hidden. -->
+        </section>
+
+        <!-- Error Content -->
+        <section class="error" data-error></section>
+        <!-- A section for displaying error messages, if needed. -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer container">
+      <p class="copyright">&copy; 2024 @sudhanshu-j</p>
+      <!-- Footer content with copyright information. -->
+    </footer>
+  </body>
+</html>
