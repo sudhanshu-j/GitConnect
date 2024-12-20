@@ -4,6 +4,12 @@ Welcome to **GitConnect**, a simple **GitHub clone** built with plain HTML, CSS,
 
 ---
 
+## Live Demo
+
+🔴 [Live Demo](https://git-connect.netlify.app)
+
+---
+
 ## Table of Contents 📑
 
 - [Project Overview](#project-overview)
