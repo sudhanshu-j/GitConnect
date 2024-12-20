@@ -192,6 +192,7 @@ After setting up GitConnect locally, you can enjoy the following features:
 
 The project has the following file structure:
 
+```bash
 GitConnect/
 ├── index.html                # Main entry point for the application
 ├── assets/
@@ -204,6 +205,7 @@ GitConnect/
 │       └── theme.js         # Handles theme switching (light/dark mode)
 └── fav/
     └── favicon.svg          # Favicon for the application
+```
 
 ## Contributing 🤝
 
